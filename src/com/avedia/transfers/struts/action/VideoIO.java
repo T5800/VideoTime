@@ -24,6 +24,12 @@ public class VideoIO {
         fis.close();
     }
 
+    /**
+     * this method, you can not read the full video:
+     * because, the video is a binary Stream,
+     * use InputStream instead!
+     * @throws Exception
+     */
     public static void videoIOBuffered() throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("F:/javaVideo/test2.MP4")));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("F:/javaVideo/test2_Buffered.MP4")));
